@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenido Bloqueado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .message {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <h1>Contenido Bloqueado</h1>
+        <p>Esta página ha sido bloqueada por contener contenido inapropiado.</p>
+        <p id="verse"></p>
+    </div>
+    <script>
+        const verses = [
+            "Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito, para que todo aquel que en él cree, no se pierda, mas tenga vida eterna. - Juan 3:16",
+            "Mas buscad primeramente el reino de Dios y su justicia, y todas estas cosas os serán añadidas. - Mateo 6:33",
+            "Mira que te mando que te esfuerces y seas valiente; no temas ni desmayes, porque Jehová tu Dios estará contigo en dondequiera que vayas. - Josué 1:9",
+            "El Señor es mi pastor, nada me faltará. - Salmos 23:1",
+            "Porque yo sé los pensamientos que tengo acerca de vosotros, dice Jehová, pensamientos de paz, y no de mal, para daros el fin que esperáis. - Jeremías 29:11"
+        ];
+        document.getElementById('verse').textContent = verses[Math.floor(Math.random() * verses.length)];
+    </script>
+</body>
+</html>

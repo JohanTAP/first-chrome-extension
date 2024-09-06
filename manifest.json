@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Bloqueador de Contenido con Versículo",
+  "version": "1.7",
+  "description": "Bloquea contenido para adultos y muestra un versículo bíblico",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
